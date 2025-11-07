@@ -162,7 +162,7 @@ func AddOrgMember(ctx context.Context, logger *slog.Logger, orgName string, user
 	ctx, cancel := context.WithTimeout(ctx, 5000*time.Second)
 	defer cancel()
 
-	rt := NewGithubStyleTransport(ctx, logger, config.EnterpriseType)
+	rt := NewGithubStyleTransport(ctx, logger, config.OrganizationType)
 	client := &http.Client{
 		Transport: rt,
 	}
@@ -314,8 +314,8 @@ func (enterprise *Enterprise) DeleteOrg(ctx context.Context, logger *slog.Logger
 	}
 
 	if queryResult.Data.Organization == nil {
-		logger.Error("Organization not found", slog.String("org", orgLogin))
-		return fmt.Errorf("organization not found: %s", orgLogin)
+		logger.Info("Organization not found, skipping deletion", slog.String("org", orgLogin))
+		return nil // Return success since org doesn't exist (already deleted or never created)
 	}
 
 	orgID := queryResult.Data.Organization.ID
