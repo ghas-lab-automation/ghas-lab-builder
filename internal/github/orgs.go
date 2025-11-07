@@ -159,7 +159,7 @@ func AddOrgMember(ctx context.Context, logger *slog.Logger, orgName string, user
 		slog.String("user", username),
 		slog.String("role", role))
 
-	ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
+	ctx, cancel := context.WithTimeout(ctx, 5000*time.Second)
 	defer cancel()
 
 	rt := NewGithubStyleTransport(ctx, logger, config.EnterpriseType)

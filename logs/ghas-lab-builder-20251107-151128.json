@@ -1,0 +1,43 @@
+{"time":"2025-11-07T15:11:28.273117183+11:00","level":"INFO","msg":"Logging initialized","log_file":"logs/ghas-lab-builder-20251107-151128.json"}
+{"time":"2025-11-07T15:11:28.273165894+11:00","level":"INFO","msg":"Loading users from file","file":"/home/s-samadi/repos/github/ghas-lab-builder/default/users.txt"}
+{"time":"2025-11-07T15:11:28.273189981+11:00","level":"INFO","msg":"Loaded users","count":1}
+{"time":"2025-11-07T15:11:28.27319763+11:00","level":"INFO","msg":"Validating users","count":1}
+{"time":"2025-11-07T15:11:28.273202133+11:00","level":"INFO","msg":"Validating users","count":1}
+{"time":"2025-11-07T15:11:28.942495568+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/shadi-test-1"}
+{"time":"2025-11-07T15:11:29.246615122+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"GET","url":"https://api.github.com/users/shadi-test-1","took":973343953}
+{"time":"2025-11-07T15:11:29.246683533+11:00","level":"INFO","msg":"User validated","username":"shadi-test-1"}
+{"time":"2025-11-07T15:11:29.246710376+11:00","level":"INFO","msg":"User validation complete","valid_count":1,"invalid_count":0}
+{"time":"2025-11-07T15:11:29.246726893+11:00","level":"INFO","msg":"Validating facilitators","count":2}
+{"time":"2025-11-07T15:11:29.246735769+11:00","level":"INFO","msg":"Validating users","count":2}
+{"time":"2025-11-07T15:11:29.246877428+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/s-samadi"}
+{"time":"2025-11-07T15:11:29.246881098+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/shadi-test-3"}
+{"time":"2025-11-07T15:11:29.923833375+11:00","level":"INFO","msg":"HTTP Response","status":404,"method":"GET","url":"https://api.github.com/users/shadi-test-3","took":676952585}
+{"time":"2025-11-07T15:11:29.92388301+11:00","level":"WARN","msg":"User not found - will be skipped","username":"shadi-test-3"}
+{"time":"2025-11-07T15:11:29.976622709+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"GET","url":"https://api.github.com/users/s-samadi","took":729752473}
+{"time":"2025-11-07T15:11:29.976679669+11:00","level":"INFO","msg":"User validated","username":"s-samadi"}
+{"time":"2025-11-07T15:11:29.976695966+11:00","level":"WARN","msg":"Invalid users found and removed","invalid_users":["shadi-test-3"],"invalid_count":1,"valid_count":1,"total_count":2}
+{"time":"2025-11-07T15:11:29.976721966+11:00","level":"INFO","msg":"User validation complete","valid_count":1,"invalid_count":1}
+{"time":"2025-11-07T15:11:29.976731991+11:00","level":"INFO","msg":"Proceeding with validated users","student_count":1,"facilitator_count":1,"total_provision_count":2,"invalid_user_count":0,"invalid_facilitator_count":1}
+{"time":"2025-11-07T15:11:29.976919845+11:00","level":"INFO","msg":"Fetching enterprise","slug":"s-samadi-ghec"}
+{"time":"2025-11-07T15:11:29.976965654+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:11:30.411247915+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":434272673}
+{"time":"2025-11-07T15:11:30.411444446+11:00","level":"INFO","msg":"Enterprise retrieved successfully","id":"E_kgDOAALaDw","slug":"s-samadi-ghec","billing email":""}
+{"time":"2025-11-07T15:11:30.411473482+11:00","level":"INFO","msg":"Starting workers","worker_count":2,"total_user_count":2}
+{"time":"2025-11-07T15:11:30.411501903+11:00","level":"INFO","msg":"Worker started","workerId":0}
+{"time":"2025-11-07T15:11:30.411510129+11:00","level":"INFO","msg":"Worker started","workerId":1}
+{"time":"2025-11-07T15:11:30.411548841+11:00","level":"INFO","msg":"Creating organization","org":"ghas-labs-2025-03-01-s-samadi","user":"s-samadi"}
+{"time":"2025-11-07T15:11:30.411515464+11:00","level":"INFO","msg":"Creating organization","org":"ghas-labs-2025-03-01-shadi-test-1","user":"shadi-test-1"}
+{"time":"2025-11-07T15:11:30.411662671+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:11:30.411836896+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:11:30.922548836+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":510891251}
+{"time":"2025-11-07T15:11:30.922741677+11:00","level":"ERROR","msg":"GraphQL errors returned","message":"Organization name is not available","errors":[{"message":"Organization name is not available","path":["createEnterpriseOrganization"]}]}
+{"time":"2025-11-07T15:11:30.922773456+11:00","level":"ERROR","msg":"Failed to create organization","user":"s-samadi","error":"GraphQL errors: [{Organization name is not available [createEnterpriseOrganization]}]"}
+{"time":"2025-11-07T15:11:30.92278638+11:00","level":"INFO","msg":"Worker stopped","workerId":1}
+{"time":"2025-11-07T15:11:30.922795692+11:00","level":"ERROR","msg":"Failed to create organization","org":"","error":"Failed to create organization: GraphQL errors: [{Organization name is not available [createEnterpriseOrganization]}]"}
+{"time":"2025-11-07T15:11:30.943420605+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":531583376}
+{"time":"2025-11-07T15:11:30.94351585+11:00","level":"ERROR","msg":"GraphQL errors returned","message":"Organization name is not available","errors":[{"message":"Organization name is not available","path":["createEnterpriseOrganization"]}]}
+{"time":"2025-11-07T15:11:30.943537054+11:00","level":"ERROR","msg":"Failed to create organization","user":"shadi-test-1","error":"GraphQL errors: [{Organization name is not available [createEnterpriseOrganization]}]"}
+{"time":"2025-11-07T15:11:30.943546164+11:00","level":"INFO","msg":"Worker stopped","workerId":0}
+{"time":"2025-11-07T15:11:30.94355836+11:00","level":"ERROR","msg":"Failed to create organization","org":"","error":"Failed to create organization: GraphQL errors: [{Organization name is not available [createEnterpriseOrganization]}]"}
+{"time":"2025-11-07T15:11:30.943575681+11:00","level":"INFO","msg":"All provisioning complete","total":2,"success":0,"failed":2}
+{"time":"2025-11-07T15:11:30.943729406+11:00","level":"INFO","msg":"All organizations and repositories created successfully"}

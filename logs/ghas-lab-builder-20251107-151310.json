@@ -1,0 +1,148 @@
+{"time":"2025-11-07T15:13:10.192803796+11:00","level":"INFO","msg":"Logging initialized","log_file":"logs/ghas-lab-builder-20251107-151310.json"}
+{"time":"2025-11-07T15:13:10.19286339+11:00","level":"INFO","msg":"Loading users from file","file":"/home/s-samadi/repos/github/ghas-lab-builder/default/users.txt"}
+{"time":"2025-11-07T15:13:10.192889036+11:00","level":"INFO","msg":"Loaded users","count":1}
+{"time":"2025-11-07T15:13:10.192895445+11:00","level":"INFO","msg":"Validating users","count":1}
+{"time":"2025-11-07T15:13:10.192900171+11:00","level":"INFO","msg":"Validating users","count":1}
+{"time":"2025-11-07T15:13:10.962762142+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/shadi-test-1"}
+{"time":"2025-11-07T15:13:11.24915054+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"GET","url":"https://api.github.com/users/shadi-test-1","took":1056116808}
+{"time":"2025-11-07T15:13:11.249201474+11:00","level":"INFO","msg":"User validated","username":"shadi-test-1"}
+{"time":"2025-11-07T15:13:11.249226327+11:00","level":"INFO","msg":"User validation complete","valid_count":1,"invalid_count":0}
+{"time":"2025-11-07T15:13:11.249238808+11:00","level":"INFO","msg":"Validating facilitators","count":2}
+{"time":"2025-11-07T15:13:11.249245709+11:00","level":"INFO","msg":"Validating users","count":2}
+{"time":"2025-11-07T15:13:11.249312836+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/s-samadi"}
+{"time":"2025-11-07T15:13:11.249346441+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/shadi-test-3"}
+{"time":"2025-11-07T15:13:11.528087291+11:00","level":"INFO","msg":"HTTP Response","status":404,"method":"GET","url":"https://api.github.com/users/shadi-test-3","took":278718739}
+{"time":"2025-11-07T15:13:11.5281487+11:00","level":"WARN","msg":"User not found - will be skipped","username":"shadi-test-3"}
+{"time":"2025-11-07T15:13:11.54465596+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"GET","url":"https://api.github.com/users/s-samadi","took":295352375}
+{"time":"2025-11-07T15:13:11.544709254+11:00","level":"INFO","msg":"User validated","username":"s-samadi"}
+{"time":"2025-11-07T15:13:11.544729736+11:00","level":"WARN","msg":"Invalid users found and removed","invalid_users":["shadi-test-3"],"invalid_count":1,"valid_count":1,"total_count":2}
+{"time":"2025-11-07T15:13:11.54476341+11:00","level":"INFO","msg":"User validation complete","valid_count":1,"invalid_count":1}
+{"time":"2025-11-07T15:13:11.544778058+11:00","level":"INFO","msg":"Proceeding with validated users","student_count":1,"facilitator_count":1,"total_provision_count":2,"invalid_user_count":0,"invalid_facilitator_count":1}
+{"time":"2025-11-07T15:13:11.545045284+11:00","level":"INFO","msg":"Fetching enterprise","slug":"s-samadi-ghec"}
+{"time":"2025-11-07T15:13:11.545109809+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:13:11.989646673+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":444512350}
+{"time":"2025-11-07T15:13:11.989871822+11:00","level":"INFO","msg":"Enterprise retrieved successfully","id":"E_kgDOAALaDw","slug":"s-samadi-ghec","billing email":""}
+{"time":"2025-11-07T15:13:11.989918069+11:00","level":"INFO","msg":"Starting workers","worker_count":2,"total_user_count":2}
+{"time":"2025-11-07T15:13:11.989967523+11:00","level":"INFO","msg":"Worker started","workerId":1}
+{"time":"2025-11-07T15:13:11.989968067+11:00","level":"INFO","msg":"Worker started","workerId":0}
+{"time":"2025-11-07T15:13:11.989980401+11:00","level":"INFO","msg":"Creating organization","org":"ghas-labs-2025-03-03-shadi-test-1","user":"shadi-test-1"}
+{"time":"2025-11-07T15:13:11.98999474+11:00","level":"INFO","msg":"Creating organization","org":"ghas-labs-2025-03-03-s-samadi","user":"s-samadi"}
+{"time":"2025-11-07T15:13:11.990062041+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:13:11.990062055+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:13:13.723347088+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":1733277771}
+{"time":"2025-11-07T15:13:13.723522805+11:00","level":"INFO","msg":"Successfully created organization","org":"ghas-labs-2025-03-03-shadi-test-1","user":"shadi-test-1","response":{"data":{"createEnterpriseOrganization":{"organization":{"id":"O_kgDODnT04A","login":"ghas-labs-2025-03-03-shadi-test-1","name":"ghas-labs-2025-03-03-shadi-test-1"}}},"errors":null}}
+{"time":"2025-11-07T15:13:15.603331998+11:00","level":"INFO","msg":"Adding user as organization admin","user":"shadi-test-1","org":"ghas-labs-2025-03-03-shadi-test-1"}
+{"time":"2025-11-07T15:13:15.603382157+11:00","level":"INFO","msg":"Adding user to organization","org":"ghas-labs-2025-03-03-shadi-test-1","user":"shadi-test-1","role":"admin"}
+{"time":"2025-11-07T15:13:15.603484905+11:00","level":"INFO","msg":"HTTP Request","method":"PUT","url":"https://api.github.com/orgs/ghas-labs-2025-03-03-shadi-test-1/memberships/shadi-test-1"}
+{"time":"2025-11-07T15:13:15.603492965+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":3613437027}
+{"time":"2025-11-07T15:13:15.603577251+11:00","level":"INFO","msg":"Successfully created organization","org":"ghas-labs-2025-03-03-s-samadi","user":"s-samadi","response":{"data":{"createEnterpriseOrganization":{"organization":{"id":"O_kgDODnT04Q","login":"ghas-labs-2025-03-03-s-samadi","name":"ghas-labs-2025-03-03-s-samadi"}}},"errors":null}}
+{"time":"2025-11-07T15:13:21.958042931+11:00","level":"INFO","msg":"Installing app on organization","org":"ghas-labs-2025-03-03-s-samadi"}
+{"time":"2025-11-07T15:13:21.958318566+11:00","level":"INFO","msg":"HTTP Response","status":403,"method":"PUT","url":"https://api.github.com/orgs/ghas-labs-2025-03-03-shadi-test-1/memberships/shadi-test-1","took":6354834076}
+{"time":"2025-11-07T15:13:21.958391212+11:00","level":"ERROR","msg":"Failed to add user to organization","status_code":403,"response":"{\"message\":\"Resource not accessible by integration\",\"documentation_url\":\"https://docs.github.com/rest/orgs/members#set-organization-membership-for-a-user\",\"status\":\"403\"}"}
+{"time":"2025-11-07T15:13:21.958422659+11:00","level":"ERROR","msg":"Failed to add user as admin","user":"shadi-test-1","org":"ghas-labs-2025-03-03-shadi-test-1","error":"failed to add user with status 403: {\"message\":\"Resource not accessible by integration\",\"documentation_url\":\"https://docs.github.com/rest/orgs/members#set-organization-membership-for-a-user\",\"status\":\"403\"}"}
+{"time":"2025-11-07T15:13:21.958437682+11:00","level":"WARN","msg":"Organization created but user was not added as admin - manual intervention may be required"}
+{"time":"2025-11-07T15:13:21.958448713+11:00","level":"INFO","msg":"Installing app on organization","org":"ghas-labs-2025-03-03-shadi-test-1"}
+{"time":"2025-11-07T15:13:22.635362803+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/enterprises/s-samadi-ghec/apps/organizations/ghas-labs-2025-03-03-s-samadi/installations"}
+{"time":"2025-11-07T15:13:22.635362796+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/enterprises/s-samadi-ghec/apps/organizations/ghas-labs-2025-03-03-shadi-test-1/installations"}
+{"time":"2025-11-07T15:13:23.148149107+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/enterprises/s-samadi-ghec/apps/organizations/ghas-labs-2025-03-03-s-samadi/installations","took":512785977}
+{"time":"2025-11-07T15:13:23.148167794+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/enterprises/s-samadi-ghec/apps/organizations/ghas-labs-2025-03-03-shadi-test-1/installations","took":512800340}
+{"time":"2025-11-07T15:13:23.148323114+11:00","level":"INFO","msg":"Successfully installed app on organization","org":"ghas-labs-2025-03-03-shadi-test-1","app_id":"92948250","installation_id":93482702}
+{"time":"2025-11-07T15:13:23.148339052+11:00","level":"INFO","msg":"Successfully installed app on organization","org":"ghas-labs-2025-03-03-s-samadi","app_id":"92948250","installation_id":93482703}
+{"time":"2025-11-07T15:13:23.148349623+11:00","level":"INFO","msg":"Creating repositories in organization","org":"ghas-labs-2025-03-03-shadi-test-1"}
+{"time":"2025-11-07T15:13:23.148357033+11:00","level":"INFO","msg":"Creating repositories in organization","org":"ghas-labs-2025-03-03-s-samadi"}
+{"time":"2025-11-07T15:13:23.148357893+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/terragoat-iac","include_all_branches":false}
+{"time":"2025-11-07T15:13:23.148365881+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/terragoat-iac","include_all_branches":false}
+{"time":"2025-11-07T15:13:23.148367898+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/terragoat-iac","include_all_branches":false}
+{"time":"2025-11-07T15:13:23.148373554+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/terragoat-iac","include_all_branches":false}
+{"time":"2025-11-07T15:13:23.727848565+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/terragoat-iac/generate"}
+{"time":"2025-11-07T15:13:24.301135694+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/terragoat-iac/generate"}
+{"time":"2025-11-07T15:13:24.932100158+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/terragoat-iac/generate","took":1783672744}
+{"time":"2025-11-07T15:13:24.932356857+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/terragoat-iac","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/terragoat-iac"}
+{"time":"2025-11-07T15:13:24.932382743+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/mono","include_all_branches":false}
+{"time":"2025-11-07T15:13:24.932392169+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/mono","include_all_branches":false}
+{"time":"2025-11-07T15:13:24.932452946+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mono/generate"}
+{"time":"2025-11-07T15:13:25.605778411+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/terragoat-iac/generate","took":2457352780}
+{"time":"2025-11-07T15:13:25.605939847+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/terragoat-iac","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/terragoat-iac"}
+{"time":"2025-11-07T15:13:25.605958022+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/mono","include_all_branches":false}
+{"time":"2025-11-07T15:13:25.605965105+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/mono","include_all_branches":false}
+{"time":"2025-11-07T15:13:25.606012566+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mono/generate"}
+{"time":"2025-11-07T15:13:26.187649167+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mono/generate","took":1255193387}
+{"time":"2025-11-07T15:13:26.187825801+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/mono","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/mono"}
+{"time":"2025-11-07T15:13:26.187843641+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/SecurityShepherd","include_all_branches":false}
+{"time":"2025-11-07T15:13:26.187858449+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/SecurityShepherd","include_all_branches":false}
+{"time":"2025-11-07T15:13:26.187903377+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/SecurityShepherd/generate"}
+{"time":"2025-11-07T15:13:26.731897153+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mono/generate","took":1125880983}
+{"time":"2025-11-07T15:13:26.732065089+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/mono","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/mono"}
+{"time":"2025-11-07T15:13:26.732080925+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/SecurityShepherd","include_all_branches":false}
+{"time":"2025-11-07T15:13:26.732087908+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/SecurityShepherd","include_all_branches":false}
+{"time":"2025-11-07T15:13:26.732129765+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/SecurityShepherd/generate"}
+{"time":"2025-11-07T15:13:27.444231334+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/SecurityShepherd/generate","took":1256323055}
+{"time":"2025-11-07T15:13:27.44456287+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/SecurityShepherd","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/SecurityShepherd"}
+{"time":"2025-11-07T15:13:27.444583507+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/moshi","include_all_branches":false}
+{"time":"2025-11-07T15:13:27.444590628+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/moshi","include_all_branches":false}
+{"time":"2025-11-07T15:13:27.444642231+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/moshi/generate"}
+{"time":"2025-11-07T15:13:27.789964544+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/SecurityShepherd/generate","took":1057830220}
+{"time":"2025-11-07T15:13:27.790135381+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/SecurityShepherd","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/SecurityShepherd"}
+{"time":"2025-11-07T15:13:27.790153042+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/moshi","include_all_branches":false}
+{"time":"2025-11-07T15:13:27.790159633+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/moshi","include_all_branches":false}
+{"time":"2025-11-07T15:13:27.790202732+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/moshi/generate"}
+{"time":"2025-11-07T15:13:28.676871135+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/moshi/generate","took":1232224428}
+{"time":"2025-11-07T15:13:28.677040298+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/moshi","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/moshi"}
+{"time":"2025-11-07T15:13:28.67705709+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/juice-shop","include_all_branches":false}
+{"time":"2025-11-07T15:13:28.677064337+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/juice-shop","include_all_branches":false}
+{"time":"2025-11-07T15:13:28.677115549+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/juice-shop/generate"}
+{"time":"2025-11-07T15:13:28.946003086+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/moshi/generate","took":1155795565}
+{"time":"2025-11-07T15:13:28.951724006+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/moshi","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/moshi"}
+{"time":"2025-11-07T15:13:28.951745786+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/juice-shop","include_all_branches":false}
+{"time":"2025-11-07T15:13:28.951753094+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/juice-shop","include_all_branches":false}
+{"time":"2025-11-07T15:13:28.951795899+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/juice-shop/generate"}
+{"time":"2025-11-07T15:13:29.930367337+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/juice-shop/generate","took":1253244063}
+{"time":"2025-11-07T15:13:29.93060389+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/juice-shop","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/juice-shop"}
+{"time":"2025-11-07T15:13:29.930671662+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/WebGoat","include_all_branches":false}
+{"time":"2025-11-07T15:13:29.930718801+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/WebGoat","include_all_branches":false}
+{"time":"2025-11-07T15:13:29.930802632+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/WebGoat/generate"}
+{"time":"2025-11-07T15:13:30.031216378+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/juice-shop/generate","took":1079415127}
+{"time":"2025-11-07T15:13:30.035154464+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/juice-shop","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/juice-shop"}
+{"time":"2025-11-07T15:13:30.035180546+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/WebGoat","include_all_branches":false}
+{"time":"2025-11-07T15:13:30.035188718+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/WebGoat","include_all_branches":false}
+{"time":"2025-11-07T15:13:30.03523594+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/WebGoat/generate"}
+{"time":"2025-11-07T15:13:31.339951828+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/WebGoat/generate","took":1409154036}
+{"time":"2025-11-07T15:13:31.339958584+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/WebGoat/generate","took":1304724307}
+{"time":"2025-11-07T15:13:31.340208032+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/WebGoat","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/WebGoat"}
+{"time":"2025-11-07T15:13:31.340224831+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/WebGoat","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/WebGoat"}
+{"time":"2025-11-07T15:13:31.340226983+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/JavaVulnerableLab","include_all_branches":false}
+{"time":"2025-11-07T15:13:31.340236801+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/JavaVulnerableLab","include_all_branches":false}
+{"time":"2025-11-07T15:13:31.340244708+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/JavaVulnerableLab","include_all_branches":false}
+{"time":"2025-11-07T15:13:31.340247033+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/JavaVulnerableLab","include_all_branches":false}
+{"time":"2025-11-07T15:13:31.340285697+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/JavaVulnerableLab/generate"}
+{"time":"2025-11-07T15:13:31.340286969+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/JavaVulnerableLab/generate"}
+{"time":"2025-11-07T15:13:32.569291123+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/JavaVulnerableLab/generate","took":1228999169}
+{"time":"2025-11-07T15:13:32.570277458+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/JavaVulnerableLab/generate","took":1229992412}
+{"time":"2025-11-07T15:13:32.570349101+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/JavaVulnerableLab","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/JavaVulnerableLab"}
+{"time":"2025-11-07T15:13:32.570368804+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/mona-gallery","include_all_branches":false}
+{"time":"2025-11-07T15:13:32.570376158+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/mona-gallery","include_all_branches":false}
+{"time":"2025-11-07T15:13:32.570404773+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/JavaVulnerableLab","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/JavaVulnerableLab"}
+{"time":"2025-11-07T15:13:32.570417642+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/mona-gallery","include_all_branches":false}
+{"time":"2025-11-07T15:13:32.57041959+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mona-gallery/generate"}
+{"time":"2025-11-07T15:13:32.570423864+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/mona-gallery","include_all_branches":false}
+{"time":"2025-11-07T15:13:32.570463181+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mona-gallery/generate"}
+{"time":"2025-11-07T15:13:33.797151706+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mona-gallery/generate","took":1226682476}
+{"time":"2025-11-07T15:13:33.797195266+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/mona-gallery/generate","took":1226773145}
+{"time":"2025-11-07T15:13:33.797402083+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/mona-gallery","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/mona-gallery"}
+{"time":"2025-11-07T15:13:33.797428219+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/exercises","include_all_branches":true}
+{"time":"2025-11-07T15:13:33.797440383+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/exercises","include_all_branches":true}
+{"time":"2025-11-07T15:13:33.797497494+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/mona-gallery","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/mona-gallery"}
+{"time":"2025-11-07T15:13:33.797528387+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/exercises","include_all_branches":true}
+{"time":"2025-11-07T15:13:33.7975355+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/exercises","include_all_branches":true}
+{"time":"2025-11-07T15:13:33.797572602+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/exercises/generate"}
+{"time":"2025-11-07T15:13:33.797500803+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/exercises/generate"}
+{"time":"2025-11-07T15:13:35.025841742+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/exercises/generate","took":1228340410}
+{"time":"2025-11-07T15:13:35.026004759+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-s-samadi/exercises","url":"https://github.com/ghas-labs-2025-03-03-s-samadi/exercises"}
+{"time":"2025-11-07T15:13:35.026023907+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/github-configurations","include_all_branches":false}
+{"time":"2025-11-07T15:13:35.02603155+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/github-configurations","include_all_branches":false}
+{"time":"2025-11-07T15:13:35.026078485+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/github-configurations/generate"}
+{"time":"2025-11-07T15:13:35.041041844+11:00","level":"INFO","msg":"HTTP Response","status":201,"method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/exercises/generate","took":1243468266}
+{"time":"2025-11-07T15:13:35.041197943+11:00","level":"INFO","msg":"Successfully created repository from template","repository":"ghas-labs-2025-03-03-shadi-test-1/exercises","url":"https://github.com/ghas-labs-2025-03-03-shadi-test-1/exercises"}
+{"time":"2025-11-07T15:13:35.041213554+11:00","level":"INFO","msg":"Creating repository","repo":"ghas-lab-templates/github-configurations","include_all_branches":false}
+{"time":"2025-11-07T15:13:35.041220079+11:00","level":"INFO","msg":"Creating repository from template","template":"ghas-lab-templates/github-configurations","include_all_branches":false}
+{"time":"2025-11-07T15:13:35.041258553+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/repos/ghas-lab-templates/github-configurations/generate"}

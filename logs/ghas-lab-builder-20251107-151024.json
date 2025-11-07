@@ -1,0 +1,41 @@
+{"time":"2025-11-07T15:10:24.435543029+11:00","level":"INFO","msg":"Logging initialized","log_file":"logs/ghas-lab-builder-20251107-151024.json"}
+{"time":"2025-11-07T15:10:24.435585752+11:00","level":"INFO","msg":"Loading users from file","file":"/home/s-samadi/repos/github/ghas-lab-builder/default/users.txt"}
+{"time":"2025-11-07T15:10:24.435607792+11:00","level":"INFO","msg":"Loaded users","count":1}
+{"time":"2025-11-07T15:10:24.435614528+11:00","level":"INFO","msg":"Validating users","count":1}
+{"time":"2025-11-07T15:10:24.435619164+11:00","level":"INFO","msg":"Validating users","count":1}
+{"time":"2025-11-07T15:10:25.116769399+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/shadi-test-1"}
+{"time":"2025-11-07T15:10:25.393407508+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"GET","url":"https://api.github.com/users/shadi-test-1","took":957706031}
+{"time":"2025-11-07T15:10:25.393454356+11:00","level":"INFO","msg":"User validated","username":"shadi-test-1"}
+{"time":"2025-11-07T15:10:25.393472548+11:00","level":"INFO","msg":"User validation complete","valid_count":1,"invalid_count":0}
+{"time":"2025-11-07T15:10:25.393496217+11:00","level":"INFO","msg":"Validating facilitators","count":2}
+{"time":"2025-11-07T15:10:25.393501433+11:00","level":"INFO","msg":"Validating users","count":2}
+{"time":"2025-11-07T15:10:25.393571828+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/shadi-test-3"}
+{"time":"2025-11-07T15:10:25.393572241+11:00","level":"INFO","msg":"HTTP Request","method":"GET","url":"https://api.github.com/users/s-samadi"}
+{"time":"2025-11-07T15:10:25.660720153+11:00","level":"INFO","msg":"HTTP Response","status":404,"method":"GET","url":"https://api.github.com/users/shadi-test-3","took":267147639}
+{"time":"2025-11-07T15:10:25.66076787+11:00","level":"WARN","msg":"User not found - will be skipped","username":"shadi-test-3"}
+{"time":"2025-11-07T15:10:25.698199439+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"GET","url":"https://api.github.com/users/s-samadi","took":304640649}
+{"time":"2025-11-07T15:10:25.698228962+11:00","level":"INFO","msg":"User validated","username":"s-samadi"}
+{"time":"2025-11-07T15:10:25.698242576+11:00","level":"WARN","msg":"Invalid users found and removed","invalid_users":["shadi-test-3"],"invalid_count":1,"valid_count":1,"total_count":2}
+{"time":"2025-11-07T15:10:25.69826542+11:00","level":"INFO","msg":"User validation complete","valid_count":1,"invalid_count":1}
+{"time":"2025-11-07T15:10:25.698275372+11:00","level":"INFO","msg":"Proceeding with validated users","student_count":1,"facilitator_count":1,"total_provision_count":2,"invalid_user_count":0,"invalid_facilitator_count":1}
+{"time":"2025-11-07T15:10:25.698455838+11:00","level":"INFO","msg":"Fetching enterprise","slug":"s-samadi-ghec"}
+{"time":"2025-11-07T15:10:25.698497585+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:10:26.106246733+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":407741514}
+{"time":"2025-11-07T15:10:26.106435294+11:00","level":"INFO","msg":"Enterprise retrieved successfully","id":"E_kgDOAALaDw","slug":"s-samadi-ghec","billing email":""}
+{"time":"2025-11-07T15:10:26.106463128+11:00","level":"INFO","msg":"Starting workers","worker_count":2,"total_user_count":2}
+{"time":"2025-11-07T15:10:26.106486864+11:00","level":"INFO","msg":"Worker started","workerId":0}
+{"time":"2025-11-07T15:10:26.106493862+11:00","level":"INFO","msg":"Creating organization","org":"ghas-labs-2025-03-01-shadi-test-1","user":"shadi-test-1"}
+{"time":"2025-11-07T15:10:26.106520858+11:00","level":"INFO","msg":"Worker started","workerId":1}
+{"time":"2025-11-07T15:10:26.106533574+11:00","level":"INFO","msg":"Creating organization","org":"ghas-labs-2025-03-01-s-samadi","user":"s-samadi"}
+{"time":"2025-11-07T15:10:26.10654335+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:10:26.106573407+11:00","level":"INFO","msg":"HTTP Request","method":"POST","url":"https://api.github.com/graphql"}
+{"time":"2025-11-07T15:10:27.728456817+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":1621871126}
+{"time":"2025-11-07T15:10:27.728643507+11:00","level":"INFO","msg":"Successfully created organization","org":"ghas-labs-2025-03-01-s-samadi","user":"s-samadi","response":{"data":{"createEnterpriseOrganization":{"organization":{"id":"O_kgDODnTztg","login":"ghas-labs-2025-03-01-s-samadi","name":"ghas-labs-2025-03-01-s-samadi"}}},"errors":null}}
+{"time":"2025-11-07T15:10:49.785936132+11:00","level":"INFO","msg":"Installing app on organization","org":"ghas-labs-2025-03-01-s-samadi"}
+{"time":"2025-11-07T15:10:49.786242433+11:00","level":"INFO","msg":"HTTP Response","status":200,"method":"POST","url":"https://api.github.com/graphql","took":23679697576}
+{"time":"2025-11-07T15:10:49.786336624+11:00","level":"INFO","msg":"Successfully created organization","org":"ghas-labs-2025-03-01-shadi-test-1","user":"shadi-test-1","response":{"data":{"createEnterpriseOrganization":{"organization":{"id":"O_kgDODnTztQ","login":"ghas-labs-2025-03-01-shadi-test-1","name":"ghas-labs-2025-03-01-shadi-test-1"}}},"errors":null}}
+{"time":"2025-11-07T15:11:00.343654591+11:00","level":"INFO","msg":"Adding user as organization admin","user":"shadi-test-1","org":"ghas-labs-2025-03-01-shadi-test-1"}
+{"time":"2025-11-07T15:11:01.557390384+11:00","level":"INFO","msg":"Adding user to organization","org":"ghas-labs-2025-03-01-shadi-test-1","user":"shadi-test-1","role":"admin"}
+{"time":"2025-11-07T15:11:01.557535878+11:00","level":"INFO","msg":"HTTP Request","method":"PUT","url":"https://api.github.com/orgs/ghas-labs-2025-03-01-shadi-test-1/memberships/shadi-test-1"}
+{"time":"2025-11-07T15:11:01.557573644+11:00","level":"ERROR","msg":"HTTP Error","method":"PUT","url":"https://api.github.com/orgs/ghas-labs-2025-03-01-shadi-test-1/memberships/shadi-test-1","error":"context deadline exceeded","took":86062}
+{"time":"2025-11-07T15:11:01.557597695+11:00","level":"ERROR","msg":"Failed to execute request","error":"Put \"https://api.github.com/orgs/ghas-labs-2025-03-01-shadi-test-1/memberships/shadi-test-1\": context deadline exceeded"}

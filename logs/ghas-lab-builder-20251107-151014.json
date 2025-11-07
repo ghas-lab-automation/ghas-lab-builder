@@ -1,0 +1,2 @@
+{"time":"2025-11-07T15:10:14.925229184+11:00","level":"INFO","msg":"Logging initialized","log_file":"logs/ghas-lab-builder-20251107-151014.json"}
+{"time":"2025-11-07T15:10:14.925270656+11:00","level":"INFO","msg":"Loading users from file","file":"/home/s-samadi/repos/github/ghas-lab-builder/examples/users.txt"}
