@@ -1,0 +1,50 @@
+{
+  "lab-env-setup": {
+    "repos": [
+      {
+        "template": "ghas-lab-templates/terragoat-iac",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/mono",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/SecurityShepherd",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/moshi",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/juice-shop",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/WebGoat",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/JavaVulnerableLab",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/mona-gallery",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/exercises",
+        "include_all_branches": true
+      },
+      {
+        "template": "ghas-lab-templates/github-configurations",
+        "include_all_branches": false
+      },
+      {
+        "template": "ghas-lab-templates/OpenAPI.NET",
+        "include_all_branches": false
+      }
+    ]
+  }
+}
