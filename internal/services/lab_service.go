@@ -117,7 +117,7 @@ func CreateLabEnvironment(ctx context.Context, logger *slog.Logger, usersFile st
 
 	logger.Info("Loaded users", slog.Int("count", len(users)))
 
-	// Get facilitators from context (optional)
+	// Get facilitators from context
 	facilitators, _ := ctx.Value(config.FacilitatorsKey).([]string)
 
 	// Validate and filter users
