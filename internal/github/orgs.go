@@ -127,32 +127,10 @@ func (enterprise *Enterprise) CreateOrg(ctx context.Context, logger *slog.Logger
 
 	org := &result.Data.CreateEnterpriseOrganization.Organization
 
-	// Add the user as admin after org creation (if not already in facilitators list)
-	isUserInFacilitators := false
-	for _, facilitator := range facilitators {
-		if facilitator == user {
-			isUserInFacilitators = true
-			break
-		}
-	}
-
-	if !isUserInFacilitators && len(facilitators) > 0 {
-		logger.Info("Adding user as organization admin", slog.String("user", user), slog.String("org", org.Login))
-		if err := AddOrgMember(ctx, logger, org.Login, user, "admin"); err != nil {
-			logger.Error("Failed to add user as admin",
-				slog.String("user", user),
-				slog.String("org", org.Login),
-				slog.Any("error", err))
-			// Don't fail the whole operation, just log the error
-			logger.Warn("Organization created but user was not added as admin - manual intervention may be required")
-		}
-	}
-
 	return org, nil
 }
 
 // AddOrgMember adds or updates a user's organization membership
-// role can be "admin" or "member"
 func AddOrgMember(ctx context.Context, logger *slog.Logger, orgName string, username string, role string) error {
 	logger.Info("Adding user to organization",
 		slog.String("org", orgName),

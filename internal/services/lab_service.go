@@ -68,10 +68,31 @@ func ProvisionOrgResources(workerId int, ctx context.Context, logger *slog.Logge
 			continue
 		}
 
-		logger.Info("Creating repositories in organization", slog.String("org", orgName))
-
-		// Add organization name to context for token scoping
+		// Add organization name to context for token scoping (must be after app installation)
 		ctx = context.WithValue(ctx, config.OrgKey, orgName)
+
+		// Add the user as admin after app installation (if not already in facilitators list)
+		facilitators := ctx.Value(config.FacilitatorsKey).([]string)
+		isUserInFacilitators := false
+		for _, facilitator := range facilitators {
+			if facilitator == user {
+				isUserInFacilitators = true
+				break
+			}
+		}
+
+		if !isUserInFacilitators && len(facilitators) > 0 {
+			logger.Info("Adding user as organization admin", slog.String("user", user), slog.String("org", orgName))
+			if err := api.AddOrgMember(ctx, logger, orgName, user, "admin"); err != nil {
+				logger.Error("Failed to add user as admin",
+					slog.String("user", user),
+					slog.String("org", orgName),
+					slog.Any("error", err))
+				logger.Warn("Organization created but user was not added as admin - manual intervention may be required")
+			}
+		}
+
+		logger.Info("Creating repositories in organization", slog.String("org", orgName))
 
 		// Track each repository creation
 		for _, repoConfig := range templateRepos {
