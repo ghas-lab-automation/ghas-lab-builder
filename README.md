@@ -27,7 +27,7 @@ A CLI tool for automating the creation and management of GitHub Advanced Securit
 
 ```bash
 # Clone the repository
-git clone https://github.com/s-samadi/ghas-lab-builder.git
+git clone https://github.com/ghas-lab-automation/ghas-lab-builder.git
 cd ghas-lab-builder
 
 # Build the binary
