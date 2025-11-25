@@ -42,17 +42,42 @@ go install
 The tool supports two authentication methods:
 
 ### Personal Access Token (PAT)
+
 ```bash
 --token YOUR_GITHUB_TOKEN
 ```
-Note: The GitHub rate limit restricts a user to 50 repos per minute and 150 repos per hour.
+
+**Required Scopes:**
+
+The classic PAT token must have the following scopes:
+- `repo`
+- `admin:org`
+- `admin:enterprise`
+
+**Note:** GitHub rate limits restrict PAT users to 50 repos per minute and 150 repos per hour.
+
+---
 
 ### GitHub App
+
 ```bash
 --app-id YOUR_APP_ID --private-key /path/to/private-key.pem
 ```
 
-**Note**: You must use either `--token` OR both `--app-id` and `--private-key`, but not both simultaneously.
+**Required Permissions:**
+
+The GitHub App must have the following permissions:
+- Read access to metadata
+- Read and write access to:
+  - Administration
+  - Code
+  - Issues
+  - Members
+  - Organization administration
+
+---
+
+**Important:** You must use either `--token` OR both `--app-id` and `--private-key`, but not both simultaneously.
 
 ## Usage
 
