@@ -47,6 +47,8 @@ The tool supports two authentication methods:
 --token YOUR_GITHUB_TOKEN
 ```
 
+**Important:** The PAT must be owned by one of the facilitators. During the lab creation process, the PAT owner (facilitator) will be added as an organization owner, which is required to create repositories in the organizations.
+
 **Required Scopes:**
 
 The classic PAT token must have the following scopes:
