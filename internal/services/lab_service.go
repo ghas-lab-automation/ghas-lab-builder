@@ -98,6 +98,8 @@ func ProvisionOrgResources(workerId int, ctx context.Context, logger *slog.Logge
 		logger.Info("Creating repositories in organization", slog.String("org", orgName))
 
 		// Track each repository creation
+		repoSuccessCount := 0
+		repoFailureCount := 0
 		for _, repoConfig := range templateRepos {
 			logger.Info("Creating repository",
 				slog.String("repo", repoConfig.Template),
@@ -114,17 +116,28 @@ func ProvisionOrgResources(workerId int, ctx context.Context, logger *slog.Logge
 					slog.String("repo", repoConfig.Template),
 					slog.Any("error", err))
 				repoResult.Error = fmt.Sprintf("%v", err)
+				repoFailureCount++
 			} else {
 				repoResult.Status = "success"
 				repoResult.URL = createdRepo.HTMLURL
+				repoSuccessCount++
 			}
 			result.Repos = append(result.Repos, repoResult)
 		}
 
-		// Mark as success and send result
-		result.Status = "success"
+		// Mark as success only if all repositories were created successfully
+		if repoFailureCount == 0 {
+			result.Status = "success"
+		} else {
+			result.Status = "partial"
+			result.Error = fmt.Sprintf("Failed to create %d out of %d repositories", repoFailureCount, len(templateRepos))
+		}
 		resultsChan <- result
-		logger.Info("Finished creating organization", slog.String("org", orgName))
+		logger.Info("Finished creating organization",
+			slog.String("org", orgName),
+			slog.Int("repo_success", repoSuccessCount),
+			slog.Int("repo_failures", repoFailureCount))
+
 	}
 
 	logger.Info("Worker stopped", slog.Int("workerId", workerId))
@@ -307,8 +320,14 @@ func CreateLabEnvironment(ctx context.Context, logger *slog.Logger, usersFile st
 				}
 
 				if resultCount == len(allUsersToProvision) {
-					logger.Info("All organizations and repositories created successfully")
-					return nil
+					if failureCount > 0 {
+						logger.Info("Some organizations or repositories failed to be created",
+							slog.Int("failed_count", failureCount))
+					} else {
+						logger.Info("All organizations and repositories created successfully")
+						return nil
+					}
+
 				}
 				logger.Error("Workers finished but not all users processed",
 					slog.Int("expected", len(allUsersToProvision)),

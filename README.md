@@ -47,6 +47,8 @@ The tool supports two authentication methods:
 --token YOUR_GITHUB_TOKEN
 ```
 
+**Important:** The PAT must be owned by one of the facilitators. During the lab creation process, the PAT owner (facilitator) will be added as an organization owner, which is required to create repositories in the organizations.
+
 **Required Scopes:**
 
 The classic PAT token must have the following scopes:
@@ -61,7 +63,7 @@ The classic PAT token must have the following scopes:
 ### GitHub App
 
 ```bash
---app-id YOUR_APP_ID --private-key /path/to/private-key.pem
+--app-id YOUR_APP_ID --private-key "$(cat /path/to/private-key.pem)"
 ```
 
 **Required Permissions:**
@@ -214,7 +216,7 @@ ghas-lab-builder repo delete \
 - `--enterprise-slug`: GitHub Enterprise slug (required)
 - `--token`: Personal Access Token for authentication
 - `--app-id`: GitHub App ID (for App authentication)
-- `--private-key`: Path to GitHub App private key file (for App authentication)
+- `--private-key`: GitHub App private key PEM content (for App authentication)
 - `--base-url`: GitHub API base URL (defaults to `https://api.github.com`)
 
 #### Lab Command Flags
