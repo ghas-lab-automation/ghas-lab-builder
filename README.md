@@ -56,7 +56,7 @@ The classic PAT token must have the following scopes:
 - `admin:org`
 - `admin:enterprise`
 
-**Note:** GitHub rate limits restrict PAT users to 50 repos per minute and 150 repos per hour.
+**Note:** GitHub rate limits restrict PAT users to 50 repos per minute and 150 repos per hour. 
 
 ---
 
@@ -69,14 +69,19 @@ The classic PAT token must have the following scopes:
 **Required Permissions:**
 
 The GitHub App must have the following permissions:
-- Read access to metadata
-- Read and write access to:
-  - Administration
-  - Code
-  - Issues
-  - Members
-  - Organization administration
 
+- Repository permissions: 
+  - Administration (Read and write)
+  - Contents (Read and write)
+  - Metadata (Read-only)
+- Organization permissions: 
+  - Administration (Read and write)
+  - Members (Read and write)
+- Enterprise permissions: 
+  - Enterprise organization installations (Read and write)
+  - Enterprise organizations (Read and write)
+
+**Note:** Generate a private key and install the GitHub App on the Enterprise level before using it to create/delete lab
 ---
 
 **Important:** You must use either `--token` OR both `--app-id` and `--private-key`, but not both simultaneously.
