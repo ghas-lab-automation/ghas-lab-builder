@@ -79,7 +79,7 @@ The GitHub App must have the following permissions:
   - Enterprise organization installations (Read and write)
   - Enterprise organizations (Read and write)
 
-**Note:** Generate a private key and install the GitHub App on the Enterprise level before using it for lab creation
+**Note:** Generate a private key and install the GitHub App on the Enterprise level before using it for creating the lab
 ---
 
 **Important:** You must use either `--token` OR both `--app-id` and `--private-key`, but not both simultaneously.
