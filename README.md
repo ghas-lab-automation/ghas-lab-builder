@@ -46,7 +46,6 @@ The tool supports two authentication methods:
 ```bash
 --token YOUR_GITHUB_TOKEN
 ```
-**NOTE:** The GitHub user linked to the PAT will be assigned as an admin for the newly created organizations. Make sure this user is listed as one of the facilitators; otherwise, you may face errors during the lab creation process.
 
 **Required Scopes:**
 
